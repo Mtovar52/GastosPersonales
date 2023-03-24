@@ -3,6 +3,7 @@ package com.example.expenseManagement.controller;
 
 import com.example.expenseManagement.entities.Employee;
 import com.example.expenseManagement.response.ResponseEmployee;
+import com.example.expenseManagement.response.ResponseEmployeeAll;
 import com.example.expenseManagement.services.ServiceEmployee;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +25,7 @@ public class ControllerEmployee {
         return serviceEmployee.CreateEmployee(employee);
     }
     @GetMapping("/employee")
-    public List<Employee> ListAllEmployee(){
+    public ResponseEmployeeAll ListAllEmployee(){
         return serviceEmployee.ListAll();
     }
 }
